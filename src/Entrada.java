@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Entrada {
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static byte leerByte(String mensaje) {
+    public static byte readByte(String mensaje) {
 
         while (true) {
             System.out.println(mensaje + " : ");
@@ -12,13 +12,13 @@ public class Entrada {
                 int valor= scanner.nextInt();
                 return(byte) valor;
             } catch (InputMismatchException e) {
-                System.out.println("Ingresa un número Byte válido por favor!");
+                System.out.println("Please add a Byte number!");
                 scanner.nextLine();
             }
         }
     }
 
-    public static int leerInt(String mensaje) {
+    public static int readInt(String mensaje) {
         while (true) {
             System.out.println(mensaje + ":");
             try {
@@ -26,13 +26,13 @@ public class Entrada {
                 scanner.nextLine();
                 return(int) valor;
             } catch (InputMismatchException e) {
-                System.out.println("Introduce un número entero válido por favor!");
+                System.out.println("Please add a real number!");
                 scanner.nextLine();
             }
         }
     }
 
-    public static float leerFloat(String mensaje) {
+    public static float readFloat(String mensaje) {
         while (true) {
             System.out.println(mensaje + ":");
             try {
@@ -40,13 +40,13 @@ public class Entrada {
                 scanner.nextLine();
                 return(float) valor;
             } catch (InputMismatchException e) {
-                System.out.println("Introduce un número decimal válido por favor!");
+                System.out.println("Please add a valid decimal number!");
                 scanner.nextLine();
             }
         }
     }
 
-    public static double leerDouble(String mensaje) {
+    public static double readDouble(String mensaje) {
         while (true) {
             System.out.println(mensaje + ":");
             try {
@@ -54,18 +54,18 @@ public class Entrada {
                 scanner.nextLine();
                 return(double) valor;
             } catch (InputMismatchException e){
-                System.out.println("Ingresa un número decimal válido por favor!");
+                System.out.println("Please add a valid decimal number!");
                 scanner.nextLine();
             }
         }
     }
-    public static char leerChar(String mensaje){
+    public static char readChar(String mensaje){
         while(true){
             System.out.println(mensaje + ":");
             String input= scanner.nextLine();
                 try{
             if(input.length() != 1){
-                System.out.println("Error, un char es solo un carácter");
+                System.out.println("Please add only one char");
                 }else {
                 return input.charAt(0);
             }
@@ -75,13 +75,13 @@ public class Entrada {
                 }
         }
     }
-    public static String leerString(String mensaje){
+    public static String readString(String mensaje){
         while(true){
             System.out.println(mensaje + ":");
             String input= scanner.nextLine();
             try{
                 if(input.trim().isEmpty()){
-                    System.out.println("Error, no has introducido ningún texto!");
+                    System.out.println("Error, text expected!");
                 }else{
                     return input;
                 }
@@ -91,7 +91,7 @@ public class Entrada {
             }
         }
     }
-    public static Boolean leerSiNo(String mensaje){
+    public static Boolean readSiNo(String mensaje){
         while(true){
             System.out.println(mensaje + "(s/n):");
             String input= scanner.nextLine();
