@@ -1,71 +1,71 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Entrance {
+public class Entrada {
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static byte readByte(String message) {
+    public static byte leerByte(String mensaje) {
 
         while (true) {
-            System.out.println(message + " : ");
+            System.out.println(mensaje + " : ");
             try {
                 int valor= scanner.nextInt();
                 return(byte) valor;
             } catch (InputMismatchException e) {
-                System.out.println("Please add a Byte number!");
+                System.out.println("Ingresa un número Byte válido por favor!");
                 scanner.nextLine();
             }
         }
     }
 
-    public static int readInt(String message) {
+    public static int leerInt(String mensaje) {
         while (true) {
-            System.out.println(message + ":");
+            System.out.println(mensaje + ":");
             try {
                 int valor= scanner.nextInt();
                 scanner.nextLine();
                 return(int) valor;
             } catch (InputMismatchException e) {
-                System.out.println("Please add a real number!");
+                System.out.println("Introduce un número entero válido por favor!");
                 scanner.nextLine();
             }
         }
     }
 
-    public static float readFloat(String message) {
+    public static float leerFloat(String mensaje) {
         while (true) {
-            System.out.println(message + ":");
+            System.out.println(mensaje + ":");
             try {
                 float valor= scanner.nextFloat();
                 scanner.nextLine();
                 return(float) valor;
             } catch (InputMismatchException e) {
-                System.out.println("Please add a valid decimal number!");
+                System.out.println("Introduce un número decimal válido por favor!");
                 scanner.nextLine();
             }
         }
     }
 
-    public static double readDouble(String message) {
+    public static double leerDouble(String mensaje) {
         while (true) {
-            System.out.println(message + ":");
+            System.out.println(mensaje + ":");
             try {
                 double valor= scanner.nextDouble();
                 scanner.nextLine();
                 return(double) valor;
             } catch (InputMismatchException e){
-                System.out.println("Please add a valid decimal number!");
+                System.out.println("Ingresa un número decimal válido por favor!");
                 scanner.nextLine();
             }
         }
     }
-    public static char readChar(String message){
+    public static char leerChar(String mensaje){
         while(true){
-            System.out.println(message + ":");
+            System.out.println(mensaje + ":");
             String input= scanner.nextLine();
                 try{
             if(input.length() != 1){
-                System.out.println("Please add only one char");
+                System.out.println("Error, un char es solo un carácter");
                 }else {
                 return input.charAt(0);
             }
@@ -75,13 +75,13 @@ public class Entrance {
                 }
         }
     }
-    public static String readString(String message){
+    public static String leerString(String mensaje){
         while(true){
-            System.out.println(message + ":");
+            System.out.println(mensaje + ":");
             String input= scanner.nextLine();
             try{
                 if(input.trim().isEmpty()){
-                    System.out.println("Error, text expected!");
+                    System.out.println("Error, no has introducido ningún texto!");
                 }else{
                     return input;
                 }
@@ -91,17 +91,17 @@ public class Entrance {
             }
         }
     }
-    public static Boolean readYesNo(String message){
+    public static Boolean leerSiNo(String mensaje){
         while(true){
-            System.out.println(message + "(y/n):");
+            System.out.println(mensaje + "(s/n):");
             String input= scanner.nextLine();
             try{
-                if(input.equals("y")){
+                if(input.equals("s")){
                     return true;
                 }else if(input.equals("n")){
                 return false;
             }else{
-               System.out.println("Error, Introduce or  `y´ or `n´!");
+               System.out.println("Error, Introduce o  `s´ o `n´!");
             }
 
             }catch(Exception e){
