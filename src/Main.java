@@ -2,21 +2,21 @@
 public class Main {
     public static void main(String[] args) {
 
-       byte Edad= Entrada.leerByte("Introduce tu edad");
-       int Año= Entrada.leerInt("Introduce tu año de nacimiento");
-       float Mes= Entrada.leerFloat("Introduce tu mes de nacimiento en formato numérico");
-       double Salario= Entrada.leerDouble("Introduce tu salario mensual solo con números");
-       char Letra= Entrada.leerChar("Introduce la última letra de tu DNI");
-       String Nombre= Entrada.leerString("Introduce tu nombre");
-       boolean Registro= Entrada.leerSiNo("¿Quieres realizar el registro con los datos dados?");
+       byte age= Entrance.readByte("Introduce your age");
+       int year= Entrance.readInt("Introduce your year of birth");
+       float month= Entrance.readFloat("Introduce your month of birth only with numbers");
+       double salary= Entrance.readDouble("Introduce your monthly salary only in numeric format");
+       char letter= Entrance.readChar("Introduce the last letter of your DNI");
+       String name= Entrance.readString("Introduce your name");
+       boolean register= Entrance.readYesNo("Do you want to register with the given data?");
 
-      System.out.println("Número de datos Introducidos:");
-      System.out.println("Edad: " + Edad);
-      System.out.println("Año de Nacimiento: " + Año);
-      System.out.println("Mes de nacimiento: " + Mes);
-      System.out.println("Salario mensual " + Salario);
-      System.out.println("Última letra del DNI: " + Letra);
-      System.out.println("Nombre del usuario: " + Nombre);
-      System.out.println("¿Continua? " + Registro );
+      System.out.println("Number of data introduced:");
+      System.out.println("Age: " + age);
+      System.out.println("Year of birth: " + year);
+      System.out.println("Month of birth: " + month);
+      System.out.println("Monthly salary " + salary);
+      System.out.println("Last letter of the DNI: " + letter);
+      System.out.println("Username: " + name);
+      System.out.println("¿Continue? " + register );
     }
     }

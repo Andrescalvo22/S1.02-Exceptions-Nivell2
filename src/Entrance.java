@@ -1,111 +1,112 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Entrada {
+public class Entrance {
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static byte leerByte(String mensaje) {
-
+    public static byte readByte(String message) {
         while (true) {
-            System.out.println(mensaje + " : ");
+            System.out.println(message + ":");
             try {
-                int valor= scanner.nextInt();
-                return(byte) valor;
+                int value = scanner.nextInt();
+                return (byte) value;
             } catch (InputMismatchException e) {
-                System.out.println("Ingresa un número Byte válido por favor!");
+                System.out.println("Please enter a valid byte number!");
                 scanner.nextLine();
             }
         }
     }
 
-    public static int leerInt(String mensaje) {
+    public static int readInt(String message) {
         while (true) {
-            System.out.println(mensaje + ":");
+            System.out.println(message + ":");
             try {
-                int valor= scanner.nextInt();
+                int value = scanner.nextInt();
                 scanner.nextLine();
-                return(int) valor;
+                return value;
             } catch (InputMismatchException e) {
-                System.out.println("Introduce un número entero válido por favor!");
+                System.out.println("Please enter a valid integer number!");
                 scanner.nextLine();
             }
         }
     }
 
-    public static float leerFloat(String mensaje) {
+    public static float readFloat(String message) {
         while (true) {
-            System.out.println(mensaje + ":");
+            System.out.println(message + ":");
             try {
-                float valor= scanner.nextFloat();
+                float value = scanner.nextFloat();
                 scanner.nextLine();
-                return(float) valor;
+                return value;
             } catch (InputMismatchException e) {
-                System.out.println("Introduce un número decimal válido por favor!");
+                System.out.println("Please enter a valid decimal number (float)!");
                 scanner.nextLine();
             }
         }
     }
 
-    public static double leerDouble(String mensaje) {
+    public static double readDouble(String message) {
         while (true) {
-            System.out.println(mensaje + ":");
+            System.out.println(message + ":");
             try {
-                double valor= scanner.nextDouble();
+                double value = scanner.nextDouble();
                 scanner.nextLine();
-                return(double) valor;
-            } catch (InputMismatchException e){
-                System.out.println("Ingresa un número decimal válido por favor!");
+                return value;
+            } catch (InputMismatchException e) {
+                System.out.println("Please enter a valid decimal number (double)!");
                 scanner.nextLine();
             }
         }
     }
-    public static char leerChar(String mensaje){
-        while(true){
-            System.out.println(mensaje + ":");
-            String input= scanner.nextLine();
-                try{
-            if(input.length() != 1){
-                System.out.println("Error, un char es solo un carácter");
-                }else {
-                return input.charAt(0);
-            }
-            }catch(Exception e){
-                    System.out.println(e.getMessage());
-                scanner.nextLine();
+
+    public static char readChar(String message) {
+        while (true) {
+            System.out.println(message + ":");
+            String input = scanner.nextLine();
+            try {
+                if (input.length() != 1) {
+                    System.out.println("Error, a char must be exactly one character.");
+                } else {
+                    return input.charAt(0);
                 }
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                scanner.nextLine();
+            }
         }
     }
-    public static String leerString(String mensaje){
-        while(true){
-            System.out.println(mensaje + ":");
-            String input= scanner.nextLine();
-            try{
-                if(input.trim().isEmpty()){
-                    System.out.println("Error, no has introducido ningún texto!");
-                }else{
+
+    public static String readString(String message) {
+        while (true) {
+            System.out.println(message + ":");
+            String input = scanner.nextLine();
+            try {
+                if (input.trim().isEmpty()) {
+                    System.out.println("Error, you didn't enter any text!");
+                } else {
                     return input;
                 }
-            } catch(Exception e){
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
-            scanner.nextLine();
+                scanner.nextLine();
             }
         }
     }
-    public static Boolean leerSiNo(String mensaje){
-        while(true){
-            System.out.println(mensaje + "(s/n):");
-            String input= scanner.nextLine();
-            try{
-                if(input.equals("s")){
-                    return true;
-                }else if(input.equals("n")){
-                return false;
-            }else{
-               System.out.println("Error, Introduce o  `s´ o `n´!");
-            }
 
-            }catch(Exception e){
-               System.out.println(e.getMessage());
+    public static Boolean readYesNo(String message) {
+        while (true) {
+            System.out.println(message + " (y/n):");
+            String input = scanner.nextLine();
+            try {
+                if (input.equalsIgnoreCase("y")) {
+                    return true;
+                } else if (input.equalsIgnoreCase("n")) {
+                    return false;
+                } else {
+                    System.out.println("Error, please enter either `y` or `n`!");
+                }
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
             }
         }
     }
