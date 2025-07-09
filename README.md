@@ -1,35 +1,34 @@
-# 📄Descripció - Enunciat de l'exercici
+# 📄Description- Exercise Statement
 
-Crear la classe **Entrada** amb mètodes estàtics per llegir dades per teclat controlant excepcions.  
-Si l’entrada és errònia, es demana de nou fins a obtenir un valor correcte.  
-Gestiona tipus `byte`, `int`, `float`, `double`, `char`, `String` i `boolean`.
+Create the Entrada class with static methods to read data from the keyboard while handling exceptions.
+If the input is invalid, the method should ask again until a valid value is entered.
+Handle the following types: byte, int, float, double, char, String, and boolean.
 
 
-# 💻Tecnologies Utilitzades
+# 💻Technologies Used
 
-- Java SE 11  
+- Java SE 21  
 - IDE (IntelliJ, Eclipse, etc.)
 
-# 📋Requisits
+# 📋Requirements
 
-- Java JDK 11 o superior  
-- Coneixements bàsics de gestió d’excepcions i lectura per teclat a Java
+Java JDK 21 or higher
+Basic knowledge of exception handling and keyboard input in Java
 
-# 🛠️Instal·lació
+# 🛠️Instalation
 
-1. Clonar o descarregar el projecte.  
-2. Obrir en un IDE.  
-3. Compilar la classe `Entrada`.
+1.Clone or download the project.
+2.Open it in an IDE.
+3.Compile the Entrada class.
 
-# ▶️Execució
+# ▶️Execution
 
-Executar la classe principal que utilitzi els mètodes estàtics de la classe `Entrada` per provar la correcta lectura i control d’errors.
+Run the main class that uses the static methods from the Entrada class to test proper input reading and error handling.
 
-# 🌐Desplegament
+# 🌐Deployments
 
-Aquest projecte està pensat per a ser executat localment com a pràctica, per tant, no disposa d’un procés específic de desplegament.
+This project is intended to be run locally as a practice exercise, and therefore has no specific deployment process.
 
+# 🤝Contributions
 
-# 🤝Contribucions
-
-Fer fork, crear branca, commit i enviar pull request.
+Fork the repository, create a branch, commit your changes, and submit a pull request.
